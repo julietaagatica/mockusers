@@ -56,9 +56,9 @@ public class Server {
         consulta("DELETE", "/users/.*",200, "application/json", "{}",1000);
         consulta("PUT","/users/.*", 200,"application/json",gson.toJson(user),1000);*/
 
-        consulta("POST","/users/token?username=(.*)&password=(.*)",200, "application/json", gson.toJson(token), 1000);
-        consulta("GET", "/sites?username=(.*)&token=(.*)",200, "application/json", gson.toJson(sites),1000);
-        consulta("GET", "/(.*)/categories?username=(.*)&token=(.*)", 200,"application/json", gson.toJson(categories), 1000 );
+        consulta("POST","/users/token",200, "application/json", gson.toJson(token), 1000);
+        consulta("GET", "/sites",200, "application/json", gson.toJson(sites),1000);
+        consulta("GET", "/(.*)/categories", 200,"application/json", gson.toJson(categories), 1000 );
 
     }
 }
